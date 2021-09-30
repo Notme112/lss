@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Hide Buildings with schooled Personal
-// @version      0.1
+// @version      1.0.1
 // @description  Blendet Gebäude mit ausgebildetem Personal beim Ausbilden aus!
 // @author       Leitstellenleiter112
 // @match        https://www.leitstellenspiel.de/buildings/*
@@ -15,7 +15,6 @@
     function check(){
         $("span.label-success").parent().parent().parent().parent().addClass("hidden");
         $("span.label-success:last").parent().parent().parent().parent().removeClass("hidden");
-        console.log(window.location.href)
     }
 
     $(document).on("scroll", function(){setTimeout(check, 200)})
@@ -26,6 +25,6 @@
 
     if(window.location.href.includes("schooling")){
         check();
-    };
+    }
 
 })();
